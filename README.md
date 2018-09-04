@@ -98,7 +98,7 @@ KmeansSubdivisionOf_start_end_DataSetName_MSAreal contains the final clustering 
 
 gcc -Wall -I/usr/local/include -c RepeatResolver.c
 gcc -L/usr/local/lib RepeatResolver.o -lgsl -lgslcblas -lm -o RepeatResolver -lpthread
-./RepeatResolver DataSetName_MSAreal -c <30> -f start end
+./RepeatResolver DataSetName_MSAreal -c <30> -f start end -p <number of available cores>
 
 
 

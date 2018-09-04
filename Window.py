@@ -29,12 +29,12 @@ else:
 	sys.exit()
 
 # Reading in Parameters: 
-coverage=35
+coverage=0.90
 parts=6
 if len(sys.argv)>1:
 	for t in range(1,len(sys.argv)-1):
 		if sys.argv[t]=='-c':
-			coverage=int(sys.argv[t+1])
+			coverage=float(sys.argv[t+1])
 		if sys.argv[t]=='-p':
 			parts=int(sys.argv[t+1])
 
@@ -44,12 +44,12 @@ average=sum(Coverages)/len(Coverages)
 maximus=max(Coverages)
 
 start=0
-while Coverages[start]<coverage:
+while Coverages[start]<coverage*average:
 	start+=1
 start*=100
 
 ende=len(Coverages)-1
-while Coverages[ende]<coverage:
+while Coverages[ende]<coverage*average:
 	ende-=1
 ende*=100
 

@@ -81,7 +81,7 @@ python Window.py -c <0.90> -p 6
 MaxCorrelation.c
 MaxCorrelation calculates the statistical significance of the deviations from the majority base in each column of a given multiple sequence alignment. This allows us to detect differences between repeat copies despite the high error rate of the reads. The input is a refined MSA “DataSetName_MSAreal”, the output is a list “MaxCorrsOf_DataSetName_MSAreal” of the maximal statistical significance of all intersections with all base groups at all sites for each base group at each site. The flag -p <1> allows parallel computation. The flag -c <30> is used to determine coverage, which is used to discard base groups that are two small to belong to even a single copy. MaxCorrelation uses the gnu scientific library. 
 
-gcc -Wall -I/usr/local/include -c MaxCorrelation.c
+gcc -I/usr/local/include -c MaxCorrelation.c
 gcc -L/usr/local/lib MaxCorrelation.o -lgsl -lgslcblas -lm -o MaxCorrelation -lpthread
 ./MaxCorrelation DataSetName_MSAreal -c <30> -p <number of available cores>
 
@@ -96,7 +96,7 @@ So if the output of Window.py is “x y z”, we run RepeatResolver once with -f
 RepeatResolver outputs three clusterings. 
 KmeansSubdivisionOf_start_end_DataSetName_MSAreal contains the final clustering that used a kmeans variant to further subdivide the earlier clustering. The earlier clusterings are also written out as DropoffSubdivisionOf_start_end_DataSetName_MSAreal and RelDropSubdivisionOf_start_end_DataSetName_MSAreal, were the former is the clustering using only the subdivision by refined groups and the later is the clustering using the recursive subdivision. 
 
-gcc -Wall -I/usr/local/include -c RepeatResolver.c
+gcc -I/usr/local/include -c RepeatResolver.c
 gcc -L/usr/local/lib RepeatResolver.o -lgsl -lgslcblas -lm -o RepeatResolver -lpthread
 ./RepeatResolver DataSetName_MSAreal -c <30> -f start end -p <number of available cores>
 

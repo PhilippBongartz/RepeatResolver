@@ -216,7 +216,7 @@ s=0
 def SeqInRead(seq,read):
 	return seq[:100] in read
 
-while s<len(Seqs) or r<len(Reads):
+while s<len(Seqs) and r<len(Reads):
 	if SeqInRead(Seqs[s],Reads[r]):
 		s+=1
 		Seq2Reads.append(r)

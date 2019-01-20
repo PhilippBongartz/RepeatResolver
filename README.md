@@ -3,13 +3,13 @@ Data and Code for the paper "Resolving repeat families with long reads"
 
 This repository contains the scripts and tools used to compute the results presented in “Resolving repeat families with long reads”. 
 
+In this paper I describe a pipeline for the resolution of interspersed repeats in long read genome assemblies. In this pipeline we build a multiple sequence alignment out of the repetitive sections of the reads, refine this multiple sequence alignment, and conduct a statistical analysis to extract copy differences to then use these copy differences in a clustering algorithm to pull the different repeat copy groups apart. We then use several clusterings of sections of the multiple sequence alignment to resolve a large repetitive region by computing the most likely connections of the unique sequences on one side of the repeat to the unique sequences on the other side. 
+This pipeline is then assessed with simulated data and Drosophila melanogaster transposons.
+
 The script used to create the simulated data sets is included. 
 
 The transposon data sets can be found at: https://github.com/PhilippBongartz/DrosophilaHistoneComplex/tree/master/Transposons
 Under this link the files MidTransposonMMA_x.tar.bz2 contain MSAs for all transposon data sets, while the files TransposonCopies_x contain the respective ground truth information. 
-
-
-
 
 DataSimulator.py 
 

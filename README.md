@@ -115,6 +115,7 @@ gcc -L/usr/local/lib RepeatResolver.o -lgsl -lgslcblas -lm -o RepeatResolver -lp
 
 
 **SimDataAssessment.py**
+
 Calculates the results for a simulated data set. SimDataAssessment.py assumes that all files belonging to the data set are in the working directory, while the folder containing the calculated clusterings is given as a command line parameter. It detects and reads in all files and calculates the number of resolved copies for each clustering as single-step resolution and for the overall repeat by using all clusterings. 
 
 python SimDataAssessment.py /Clusterings
@@ -123,6 +124,7 @@ python SimDataAssessment.py /Clusterings
 
 
 **TransposonAssessment.py**
+
 Calculates the results for a transposon data set. The Kmeans clustering path is given as a command line parameter and the other files are loaded depending on that. TransposonAssessment.py expects the MSA, the MaxCorrs-file, the three Clusterings, as well as the ground truth files “TransposonCopies_x” to be in the working directory. 
 
 TransposonAssessment.py KmeansSubdivisionOf_start_end_MidTransposonMMA_x_real

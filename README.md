@@ -80,6 +80,7 @@ gcc -mcmodel=medium PW_ReAligner.c -o PW_ReAligner
 **Window.py**
 
 Calculates coverage for different sites of the multiple sequence alignment and provides a subdivision of the MSA into equally spaced sections with a certain coverage. The flag -c <0.90> determines the fraction of the average coverage of the MSA that should still be available at each point in a section. The flag -p <6> determines into how many sections the MSA will be divided. The output is a list of MSA sites that can be used to subdivide the MSA. For the simulated 30kbp repeats we have used 6 parts a la 5kbp. For the transposon MSA 1 part would allow to recreate the single-step resolution. 
+
 python Window.py -c <0.90> -p 6
 
 
